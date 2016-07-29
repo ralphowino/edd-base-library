@@ -1,0 +1,22 @@
+{
+  "name": "File",
+  "variables": {
+    "file_name": {
+      "type": "string",
+      "name": "Filename"
+    },
+    "file_name_suffix": {
+      "type": "string",
+      "name": "Filename Suffix"
+    },
+    "file_name_prefix": {
+      "type": "string",
+      "name": "Filename Prefix"
+    },
+    "content": {
+      "type": "string",
+      "name": "Content"
+    }
+  },
+  "render": "{{file_path}}{{file_name_prefix}}{{file_name}}{{file_name_suffix}}\n{{content | safe }}"
+}
