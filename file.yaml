@@ -1,0 +1,32 @@
+description: an ordinary file
+
+variables:
+  schema:
+    type: object
+    properties:
+      file_name_suffix:
+        type: string
+      file_name_prefix:
+        type: string
+      file_name:
+        type: string
+      file_content:
+        type: string
+      file_path:
+        type: string
+        default: .
+    required:
+      - file_name
+      - file_content
+      - file_path
+  form:
+    - file_name_prefix
+    - file_name
+    - file_name_suffix
+    - file_path
+    - file_content
+
+render: |
+  {{file_name_prefix}}{{file_name}}{{file_name_suffix}}
+  {{file_path}}
+  {{file_content }}
