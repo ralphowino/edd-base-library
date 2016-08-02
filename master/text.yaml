@@ -1,0 +1,14 @@
+description: a simple text to insert into a file
+
+variables:
+  schema:
+    type: object
+    properties:
+      content:
+        type: string
+    required:
+      - content
+  form:
+     - '*'
+
+render: {{content}}
